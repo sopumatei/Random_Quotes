@@ -1,0 +1,86 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* FONT COLORS */
+:root {
+    --HIGHLIGHT-COLOR: rgb(124, 240, 66);
+    --TEXT-COLOR: rgb(79, 79, 79);
+    --CONTAINER-BACKGROUND-COLOR: #121111;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* GENERAL STYLES */
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    background-color: black;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    min-height: 100vh;
+    text-align: center;
+    padding-inline: 0.5em;
+    color: var(--TEXT-COLOR);
+}
+
+footer {
+    color: var(--HIGHLIGHT-COLOR);
+}
+
+/* TITLE */
+
+#title {
+    color: var(--HIGHLIGHT-COLOR);
+    transition: all 0.3s linear;
+}
+
+/* QUOTE SECTION */
+
+#quote-container {
+    background-color: var(--CONTAINER-BACKGROUND-COLOR);
+    display: none;
+    place-content: center;
+    /* gap: 1em; */
+    padding: 0.5em;
+    border-radius: 16px;
+    max-width: 850px;
+}
+
+#quote-text {
+    font-weight: 300;
+}
+
+#quote-author {
+    font-weight: 500;
+    color: var(--HIGHLIGHT-COLOR);
+}
+
+.intro-animation {
+    animation-name: intro;
+    animation-timing-function: linear;
+    animation-duration: 0.3s;
+}
+
+@keyframes intro {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
